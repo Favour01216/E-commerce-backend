@@ -28,8 +28,8 @@ SO THAT my company can compete with other e-commerce companies
 
 # Demo Video
 
-![This shows GET routes to return a single category, a single product, and a single tag being tested in Insomnia Core:](https://drive.google.com/file/d/1JKOiSLzTaz_3ZTLFhQ99Rjbz1WRiT1u-/view)
-![This shows the POST, PUT, and DELETE routes for categories being tested in Insomnia Core:](https://drive.google.com/file/d/1u_WUiF3FMng-DFNS6boh1P8mNIUmN8OO/view)
+This shows GET routes to return a single category, a single product, and a single tag being tested in Insomnia Core(https://drive.google.com/file/d/1JKOiSLzTaz_3ZTLFhQ99Rjbz1WRiT1u-/view)
+This shows the POST, PUT, and DELETE routes for categories being tested in Insomnia Core(https://drive.google.com/file/d/1u_WUiF3FMng-DFNS6boh1P8mNIUmN8OO/view)
 
 # License
 
