@@ -22,25 +22,20 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
-  try {
-    const tagByID = Tag.findOne({
-      where: {
-        id: req.params.id,
-      },
-      include: [
-        {
-          model: Product,
-        },
-      ],
+  Tag.findOne({
+    where: {
+      id: req.params.id,
+    },
+    include: {
+      model: Product,
+      attributes: ["product_name", "price", "stock", "category_id"],
+    },
+  })
+    .then((dbTagData) => res.json(dbTagData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
     });
-    if (tagByID) {
-      res.json(tagByID);
-    } else {
-      res.status(404).json({ error: "No tag with this ID" });
-    }
-  } catch (error) {
-    res.status(508).json(error);
-  }
 });
 
 router.post("/", (req, res) => {
@@ -58,20 +53,22 @@ router.post("/", (req, res) => {
 
 router.put("/:id", (req, res) => {
   // update a tag's name by its `id` value
-  try {
-    const updatedTag = Tag.update(req.body, {
+  Tag.update(
+    {
+      tag_name: req.body.tag_name,
+    },
+    {
       where: {
         id: req.params.id,
       },
-    });
-    if (updatedTag) {
-      res.json(updatedTag);
-    } else {
-      res.status(404).json({ error: "No tag with this ID" });
     }
-  } catch (error) {
-    res.status(509).json(error);
-  }
+  )
+    .then((tag) => {
+      res.json(tag);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
 });
 
 router.delete("/:id", (req, res) => {

@@ -1,5 +1,7 @@
 # E-commerce Back End Starter Code
 
+An online retail website's E-Commerce Backend is a REST API. The API is developed on top of an Express.js server that communicates with a MySQL database using Sequelize. A Node.js ORM (Object Relation Mapping) for Postgres, MySQL, MariaDB, SQLite, and Microsoft SQL Server is called Sequelize. It is built on promises.
+
 ## Table of contents
 
 - [Table of contents](#table-of-contents)
@@ -26,7 +28,8 @@ SO THAT my company can compete with other e-commerce companies
 
 # Demo Video
 
-(https://watch.screencastify.com/v/cZ7JrGk7tb2DVpdpB1DF)
+![This shows GET routes to return a single category, a single product, and a single tag being tested in Insomnia Core:](https://drive.google.com/file/d/1JKOiSLzTaz_3ZTLFhQ99Rjbz1WRiT1u-/view)
+![This shows the POST, PUT, and DELETE routes for categories being tested in Insomnia Core:](https://drive.google.com/file/d/1u_WUiF3FMng-DFNS6boh1P8mNIUmN8OO/view)
 
 # License
 
